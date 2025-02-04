@@ -5,6 +5,10 @@
 echo "Updating system..."
 sudo pacman -Syu
 
+# Manual Pages viewer
+echo "Installing man-db..."
+sudo pacman -Sy man-db
+
 # Gnome Desktop Manager
 echo "Installing Gnome Desktop Manager..."
 sudo pacman -Sy gdm
