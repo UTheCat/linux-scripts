@@ -17,9 +17,13 @@ sudo pacman -Sy mesa
 echo "Installing mesa-utils..."
 sudo pacman -Sy mesa-utils
 
+echo "Running eglinfo -B..."
+eglinfo -B
+
 # Gnome Desktop Manager
 echo "Installing Gnome Desktop Manager..."
 sudo pacman -Sy gdm
+
 echo "Enabling gdm"
 sudo systemctl enable gdm.service
 
@@ -54,6 +58,7 @@ sudo pacman -Sy flatpak
 # open-vm-tools (Open VMWare Tools)
 echo "Installing open-vm-tools..."
 sudo pacman -Sy open-vm-tools
+
 echo "Enabling open-vm-tools"
 sudo systemctl enable vmtoolsd
 
