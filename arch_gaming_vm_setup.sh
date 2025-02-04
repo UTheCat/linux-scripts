@@ -9,6 +9,14 @@ sudo pacman -Syu
 echo "Installing man-db..."
 sudo pacman -Sy man-db
 
+# Mesa
+echo "Installing Mesa..."
+sudo pacman -Sy mesa
+
+# mesa-utils
+echo "Installing mesa-utils..."
+sudo pacman -Sy mesa-utils
+
 # Gnome Desktop Manager
 echo "Installing Gnome Desktop Manager..."
 sudo pacman -Sy gdm
@@ -47,7 +55,7 @@ sudo pacman -Sy flatpak
 echo "Installing open-vm-tools..."
 sudo pacman -Sy open-vm-tools
 echo "Enabling open-vm-tools"
-sudo systemctl enable open-vm-tools
+sudo systemctl enable vmtoolsd
 
 # ProtonVPN
 echo "Installing ProtonVPN..."
