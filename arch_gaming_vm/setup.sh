@@ -8,65 +8,73 @@ pacman -Syu
 
 # Manual Pages viewer
 echo "Installing man-db..."
-pacman -Sy man-db
+pacman -S man-db
 
 # Mesa
 echo "Installing Mesa..."
-pacman -Sy mesa
+pacman -S mesa
 
 # mesa-utils
 echo "Installing mesa-utils..."
-pacman -Sy mesa-utils
+pacman -S mesa-utils
 
 # Gnome Desktop Manager
-echo "Installing Gnome Desktop Manager..."
-pacman -Sy gdm
+# (commented out for now due to crashes)
+#echo "Installing Gnome Desktop Manager..."
+#pacman -S gdm
 
-echo "Enabling gdm"
-systemctl enable gdm.service
+#echo "Enabling gdm"
+#systemctl enable gdm.service
+
+# Simple Desktop Display Manager
+echo "Installing Simple Desktop Display Manager..."
+pacman -S sddm
+
+echo "Enabling Simple Desktop Display Manager..."
+systemctl enable sddm
 
 # Gnome Desktop
 echo "Installing Gnome..."
-pacman -Sy gnome
+pacman -S gnome
 
 # Gamescope
 echo "Installing gamescope..."
-pacman -Sy gamescope
+pacman -S gamescope
 
 # Git
 echo "Installing Git..."
-pacman -Sy git
+pacman -S git
 
 # VSCode
 echo "Installing VSCode..."
-pacman -Sy code
+pacman -S code
 
 # .NET
 echo "Installing .NET..."
-pacman -Sy dotnet-sdk
+pacman -S dotnet-sdk
 
 # Firefox
 echo "Installing Firefox..."
-pacman -Sy firefox
+pacman -S firefox
 
 # Godot (Mono)
 echo "Installing godot-mono..."
-pacman -Sy godot-mono
+pacman -S godot-mono
 
 # Flatpak
 echo "Installing Flatpak..."
-pacman -Sy flatpak
+pacman -S flatpak
 
 # open-vm-tools (Open VMWare Tools)
 echo "Installing open-vm-tools..."
-pacman -Sy open-vm-tools
+pacman -S open-vm-tools
 
 echo "Enabling open-vm-tools"
 systemctl enable vmtoolsd
 
 # ProtonVPN
 echo "Installing ProtonVPN..."
-pacman -Sy proton-vpn-gtk-app
+pacman -S proton-vpn-gtk-app
 
 # Done.
 echo "Done. You may now reboot."
