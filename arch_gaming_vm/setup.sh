@@ -1,86 +1,72 @@
 # Setup script for Arch Linux Gaming VM
 # This script assumes it's being run on a VMWare virtual machine.
+# This script also assumes it's being run with superuser privileges.
 
 # Update system
 echo "Updating system..."
-sudo pacman -Syu
+pacman -Syu
 
 # Manual Pages viewer
 echo "Installing man-db..."
-sudo pacman -Sy man-db
+pacman -Sy man-db
 
 # Mesa
 echo "Installing Mesa..."
-sudo pacman -Sy mesa
+pacman -Sy mesa
 
 # mesa-utils
 echo "Installing mesa-utils..."
-sudo pacman -Sy mesa-utils
-
-echo "Running eglinfo -B..."
-eglinfo -B
+pacman -Sy mesa-utils
 
 # Gnome Desktop Manager
 echo "Installing Gnome Desktop Manager..."
-sudo pacman -Sy gdm
+pacman -Sy gdm
 
 echo "Enabling gdm"
-sudo systemctl enable gdm.service
+systemctl enable gdm.service
+
+# Gnome Desktop
+echo "Installing Gnome..."
+pacman -Sy gnome
 
 # Gamescope
 echo "Installing gamescope..."
-sudo pacman -Sy gamescope
+pacman -Sy gamescope
 
 # Git
 echo "Installing Git..."
-sudo pacman -Sy git
+pacman -Sy git
 
 # VSCode
 echo "Installing VSCode..."
-sudo pacman -Sy code
+pacman -Sy code
 
 # .NET
 echo "Installing .NET..."
-sudo pacman -Sy dotnet-sdk
+pacman -Sy dotnet-sdk
 
 # Firefox
 echo "Installing Firefox..."
-sudo pacman -Sy firefox
+pacman -Sy firefox
 
 # Godot (Mono)
 echo "Installing godot-mono..."
-sudo pacman -Sy godot-mono
+pacman -Sy godot-mono
 
 # Flatpak
 echo "Installing Flatpak..."
-sudo pacman -Sy flatpak
+pacman -Sy flatpak
 
 # open-vm-tools (Open VMWare Tools)
 echo "Installing open-vm-tools..."
-sudo pacman -Sy open-vm-tools
+pacman -Sy open-vm-tools
 
 echo "Enabling open-vm-tools"
-sudo systemctl enable vmtoolsd
+systemctl enable vmtoolsd
 
 # ProtonVPN
 echo "Installing ProtonVPN..."
-sudo pacman -Sy proton-vpn-gtk-app
-
-# Sober (Runs Roblox on Linux)
-echo "Installing Sober..."
-flatpak install -u org.vinegarhq.Sober
-
-# User directories
-echo "Making ~/bin directory..."
-mkdir ~/bin
-
-echo "Making ~/repos directory..."
-mkdir ~/repos
-
-# Git config
-echo "Configuring Git..."
-git config --global user.name "Anonymous"
-git config --global user.email "<>"
+pacman -Sy proton-vpn-gtk-app
 
 # Done.
 echo "Done. You may now reboot."
