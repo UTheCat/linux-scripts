@@ -1,6 +1,6 @@
 # Sober (Runs Roblox on Linux)
 echo "Installing Sober..."
-flatpak install -u org.vinegarhq.Sober
+flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
 
 # User directories
 echo "Making ~/bin directory..."
