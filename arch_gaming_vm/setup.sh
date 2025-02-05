@@ -83,5 +83,4 @@ git config --global user.name "Anonymous"
 git config --global user.email "<>"
 
 # Done.
-echo "Done. Now rebooting..."
-reboot
+echo "Done. You may now reboot."
