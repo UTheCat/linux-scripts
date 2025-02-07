@@ -65,6 +65,13 @@ pacman -S godot-mono
 echo "Installing Flatpak..."
 pacman -S flatpak
 
+# VirtualBox Guest Utils
+echo "Installing VirtualBox Guest Utils..."
+pacman -S virtualbox-guest-utils
+
+echo "Enabling VBoxService so VirtualBox Guest Utils is started after boot..."
+systemctl enable vboxservice.service
+
 # ProtonVPN
 echo "Installing ProtonVPN..."
 pacman -S proton-vpn-gtk-app
