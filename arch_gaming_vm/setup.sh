@@ -1,5 +1,5 @@
 # Setup script for Arch Linux Gaming VM
-# This script assumes it's being run on a VMWare virtual machine.
+# This script assumes it's being run on a Virtual Box virtual machine.
 # This script also assumes it's being run with superuser privileges.
 
 # Update system
